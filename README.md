@@ -6,7 +6,7 @@ This code challenge is due on the 25th of May or earlier. This means that by the
 Please read the overview [here.](http://atdevoutreach.viewdocs.io/codeChallenge05018/)
 
 ### Steps:
-1. Head over to the code challenge [here](atdevoutreach.viewdocs.io/codeChallenge05018/CodeChallenge05018/) to get acquainted.
+1. Head over to the code challenge [here](http://atdevoutreach.viewdocs.io/codeChallenge05018/CodeChallenge05018/) to get acquainted.
 
 2.  Check out the format for submitting your code [here](http://atdevoutreach.viewdocs.io/codeChallenge05018/CodeChallengeSteps/)
 
