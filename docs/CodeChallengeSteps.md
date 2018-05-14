@@ -1,7 +1,7 @@
 # Working on the Code Challenge
-1. Fork the code challenge repository provided.
+1.Fork the code challenge repository provided.
 
-2. Make a topic branch. In your github form, keep the master branch clean. When you create a branch, it essentially will be a copy of the master.
+2.Make a topic branch. In your github form, keep the master branch clean. When you create a branch, it essentially will be a copy of the master.
 
 >Pull all changes, make sure your repository is up to date
 
@@ -30,8 +30,8 @@ $ git branch
 $ git push origin -u 254787235065
 ```
 
-3. Make changes to the fork following the CodeChallenge provided.
+3.Make changes to the fork following the CodeChallenge provided.
 
-4. Commit the changes to your fork.
+4.Commit the changes to your fork.
 
-5. Make a pull request to the codeChallenge Repo.
+5.Make a pull request to the codeChallenge Repo.
