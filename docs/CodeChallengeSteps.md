@@ -14,13 +14,16 @@ $ git pull origin master
 $ git checkout -b +254787235065 master
 ```
 
->Push the new branch to github
-```sh
-$ git push origin
-```
 >See all branches created
 ```sh
 $ git branch
+* +254787235065
+  master
+```
+
+>Push the new branch to github
+```sh
+$ git push origin
 ```
 
 ### 3. Make changes to the fork following the CodeChallenge provided.
