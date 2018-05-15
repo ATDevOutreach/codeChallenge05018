@@ -13,3 +13,6 @@ You can use the following resources to get you started on your way:
 * [SMS Sending Documentation](http://docs.africastalking.com/sms/sending)
 * [SMS Receiving Documentation](http://docs.africastalking.com/sms/callback)
 * [Other SMS Help articles](http://help.africastalking.com/sms)
+
+## Slack
+In case you have any questions, join our Slack [here](https://slackin-africastalking.now.sh/)

@@ -29,3 +29,6 @@ You can participate on as many challenges as you will:
   - Code Challenges are time bound
   - Additional rules will be provided on the code challenge and will vary for each challenge
   - You are free to use all manner of tools
+
+## Slack
+In case you have any questions, join our Slack [here](https://slackin-africastalking.now.sh/)

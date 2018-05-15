@@ -13,3 +13,6 @@ Please read the overview [here.](http://atdevoutreach.viewdocs.io/codeChallenge0
 3.  Make sure when creating a branch to use your correct phone Number, as this is what we will use to get back to you.
 > NB: As a branch-name you can also use your email.
 > See you on the other side, and best of luck!
+
+## Slack
+In case you have any questions, join our Slack [here](https://slackin-africastalking.now.sh/)
