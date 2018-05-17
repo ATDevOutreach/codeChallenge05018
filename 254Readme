@@ -1,1 +1,13 @@
-Hello World!
+
+I am an employee at AT, but just decided to do the challenge to show that as AT, we support the challenge 
+for our developers.
+
+But I still deserve a gift!
+
+So am hosting the code in cloud 9 , inorder for you to test, you have to alert me to run the server.
+So either slack me, email, or text and I will do that.
+
+Testing : 
+Once you launch the simulator, go to 'SMS', then send 'New Message'. In the To field, use the shortcode : 4218, 
+you can put anything in the message section and then 'Send'.You will get the expected response, not unless the server 
+is not running.
