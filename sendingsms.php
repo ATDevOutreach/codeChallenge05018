@@ -2,8 +2,6 @@
 
 extract($_POST);
 
-
-$file = fopen('content.txt','w');
  
  $from = $_POST['from']; 
  $to = $_POST['to'];
