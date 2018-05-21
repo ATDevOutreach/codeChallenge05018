@@ -1,0 +1,1 @@
+web: java -jar target/AF2WSMS-1.0.jar

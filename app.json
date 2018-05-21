@@ -1,0 +1,5 @@
+{
+  "name": "SMS Comand Box",
+  "description": "A command application using sms",
+  "addons": [ "heroku-postgresql" ]
+}
