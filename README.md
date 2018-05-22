@@ -23,7 +23,3 @@ WHEN THE SITE IS COME UP YOU MAY CONTINUE WITH OTHER PROCEDURE
 7. you will receive the text 
 
 8. Congratulations , you already test !!!!
-
-
-
-
