@@ -16,3 +16,9 @@ Please read the overview [here.](http://atdevoutreach.viewdocs.io/codeChallenge0
 
 ## Slack
 In case you have any questions, join our Slack [here](https://slackin-africastalking.now.sh/)
+
+## Access My App
+
+* Login with 701057466 on sandbox
+* On the sms tab send any message to 57466 short code.
+* Expect a request a message response of "I am a lumberjack. I sleep all night and work all day!"
