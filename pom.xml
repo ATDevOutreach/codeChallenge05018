@@ -123,6 +123,12 @@
       <version>1.0.1.Final</version>
     </dependency>
 
+    <!--<dependency>-->
+      <!--<groupId>com.africastalking</groupId>-->
+      <!--<artifactId>core</artifactId>-->
+      <!--<version>3.3.4</version>-->
+    <!--</dependency>-->
+
     <dependency>
       <groupId>org.webjars</groupId>
       <artifactId>jquery</artifactId>

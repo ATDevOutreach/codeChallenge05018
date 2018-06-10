@@ -34,7 +34,7 @@ public class MessageController {
                               @RequestParam(value = "numbers") String numbers,
                               @RequestParam(value = "key", required = false, defaultValue = "1234") String key) {
         AfricasTalkingGateway talkingGateway
-                = new AfricasTalkingGateway(Constants.DEBUG_USERNAME, Constants.API_KEY, Constants.DEBUG_MODE);
+                = new AfricasTalkingGateway(Constants.LIVE_USERNAME, Constants.API_KEY_LIVE);
         JSONArray jsonArray = new JSONArray();
         new SentMessageDao().insertSentmessage(jsonArray);
         try {
@@ -50,18 +50,19 @@ public class MessageController {
 
     /**
      * this method is called when we create a subscription to the number
-     *  from the internet. To be implemented
+     * from the internet. To be implemented
+     *
      * @param phoneNumber the number we subscribed
-     * @param shortCode short code we subscribe to
-     * @param keyword the     topic we subscribe
+     * @param shortCode   short code we subscribe to
+     * @param keyword     the     topic we subscribe
      * @return the status of the subscription
      */
-    @RequestMapping(value = "/sms/csub", method = RequestMethod.GET)
+    @RequestMapping(value = "/sms/create_subscription", method = RequestMethod.GET)
     public String createSubscription(@RequestParam(value = "phoneNumber") String phoneNumber,
                                      @RequestParam(value = "shortCode") String shortCode,
                                      @RequestParam(value = "keyword") String keyword) {
 
-        AfricasTalkingGateway gateway = new AfricasTalkingGateway(Constants.DEBUG_USERNAME, Constants.API_KEY,
+        AfricasTalkingGateway gateway = new AfricasTalkingGateway(Constants.DEBUG_USERNAME, Constants.API_KEY_DEBUG,
                 Constants.DEBUG_MODE);
         JSONObject subscription = new JSONObject();
         try {
@@ -75,7 +76,8 @@ public class MessageController {
 
     /**
      * method fetch all premium subscribed message based on the topic.
-     *To be implemented
+     * To be implemented
+     *
      * @param shortCode a number you subcribed
      * @param keyword   the topic you want to fetch message
      * @return json contain all new sms
@@ -83,7 +85,7 @@ public class MessageController {
     @RequestMapping(value = "/sms/premium/all", method = RequestMethod.GET)
     public String fetchPremiumSubscription(@RequestParam(value = "shortCode") String shortCode,
                                            @RequestParam(value = "keyword") String keyword) {
-        AfricasTalkingGateway gateway = new AfricasTalkingGateway(Constants.DEBUG_USERNAME, Constants.API_KEY,
+        AfricasTalkingGateway gateway = new AfricasTalkingGateway(Constants.DEBUG_USERNAME, Constants.API_KEY_DEBUG,
                 Constants.DEBUG_MODE);
         JSONArray jsonArray = new JSONArray();
         int lastIndex = 0;
@@ -111,8 +113,7 @@ public class MessageController {
      */
     @RequestMapping(value = "/sms/all")
     public String fetchAllMessage() {
-        AfricasTalkingGateway gateway = new AfricasTalkingGateway(Constants.DEBUG_USERNAME, Constants.API_KEY,
-                Constants.DEBUG_MODE);
+        AfricasTalkingGateway gateway = new AfricasTalkingGateway(Constants.LIVE_USERNAME, Constants.API_KEY_LIVE);
         JSONArray jsonArray = new JSONArray();
         int lastIndex;
         try {
@@ -135,11 +136,11 @@ public class MessageController {
      * the system
      *
      * @param from=number of the sender
-     * @param to=mumber   where message goes
+     * @param to=number   where message goes
      * @param text=the    main message
      * @param date=       show when a message is received
      * @param id=the      unique number of the message
-     * @param linkId .
+     * @param linkId      .
      */
     @RequestMapping(value = "/sms/receive", method = RequestMethod.POST)
     public void receiveMessage(@RequestParam(value = "from") String from,
@@ -158,8 +159,7 @@ public class MessageController {
             jsonObject.put("text", text);
 
             //return jsonObject.toString();
-            AfricasTalkingGateway gateway = new AfricasTalkingGateway(Constants.DEBUG_USERNAME, Constants.API_KEY,
-                    Constants.DEBUG_MODE);
+            AfricasTalkingGateway gateway = new AfricasTalkingGateway(Constants.LIVE_USERNAME, Constants.API_KEY_LIVE);
             gateway.sendMessage(from, " I am a lumberjack. I sleep all night and work all day!");
 
             //insert int the database
@@ -180,7 +180,7 @@ public class MessageController {
      * @param phoneNumber=the          number we send the message
      * @param networkCode=the          operate which return the delivery report
      * @param id=the                   unique identification of the message
-     * @param failureReason=decription if message is not received
+     * @param failureReason=description if message is not received
      */
     @RequestMapping(value = "/sms/delivery", method = RequestMethod.POST)
     public void deliverReport(@RequestParam(value = "status") String status,
@@ -195,13 +195,14 @@ public class MessageController {
 
     /**
      * this method is called when the user subscribe to the service
-     *. to be implemented
+     * . to be implemented
+     *
      * @param phoneNumber=the number of the user
      * @param shortCode=the   code he subscribe to
-     * @param keyword=the     topic he/she subcribe to
+     * @param keyword=the     topic he/she subscribe to
      * @param updateType      if its Addition means he subscribe if Deletion means he is unsubscribe
      */
-    @RequestMapping(value = "/sms/sub", method = RequestMethod.POST)
+    @RequestMapping(value = "/sms/subscribe", method = RequestMethod.POST)
     public void subscriptionNotification(@RequestParam(value = "phoneNumber") String phoneNumber,
                                          @RequestParam(value = "shortCode") String shortCode,
                                          @RequestParam(value = "keyword") String keyword,
@@ -214,11 +215,12 @@ public class MessageController {
     /**
      * this method is called when user opt out of the bulk sms or alphanumeric sms
      * to be implemented
-     * @param senderId sender
+     *
+     * @param senderId        sender
      * @param phoneNumber=the number opt out
      */
-    @RequestMapping(value = "/sms/unsub", method = RequestMethod.POST)
-    public void bulkOptOut(@RequestParam(value = "senderId") String senderId,
+    @RequestMapping(value = "/sms/opt_out", method = RequestMethod.POST)
+    public void userOptOut(@RequestParam(value = "senderId") String senderId,
                            @RequestParam(value = "phoneNumber") String phoneNumber) {
         //put data in the database and update the black list
 
